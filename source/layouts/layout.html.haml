@@ -38,9 +38,14 @@
         %meta{ property: name, content: value}
 
     - if @ogp_image_path.present?
-      %meta{property:"og:image",       content:"#{data.config.site.root_url}/images/opengraph/#{@ogp_image_path}/og.jpg"}
-      %meta{property:"fb:image",       content:"#{data.config.site.root_url}/images/opengraph/#{@ogp_image_path}/fb.jpg"}
-    
+      %meta{property:"og:image",         content:"#{data.config.site.root_url}/images/opengraph/#{@ogp_image_path}/og.jpg"}
+      %meta{property:"fb:image",         content:"#{data.config.site.root_url}/images/opengraph/#{@ogp_image_path}/fb.jpg"}
+
+      %meta{property:"fb:image:width"},  content: "600"}
+      %meta{property:"fb:image:height"}, content: "315"}
+
+      %meta{property:"og:image:width"},  content: "560"}
+      %meta{property:"og:image:height"}, content: "300"}
     - if @twitter_label1.present? && @twitter_data1.present?
       %meta{content: "#{@twitter_label1}", name: "twitter:label1"}
       %meta{content: "#{@twitter_data1}",  name: "twitter:data1"}
