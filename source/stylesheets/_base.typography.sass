@@ -22,3 +22,18 @@ h3
 p
   +fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 18px)
   line-height: 1.6
+
++respond-to(ipad-up)
+  .text-columns
+    column-count: 2
+    column-gap: 40px
+    p
+      margin: 0 0 1em
+
+body.light-body
+  h1, h2, h3
+    color: #fff
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7)
+  p
+    color: rgba(255,255,255,0.8)
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7)

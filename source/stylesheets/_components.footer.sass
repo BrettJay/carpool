@@ -1,7 +1,8 @@
 footer
   background-color: #666300
   background: linear-gradient(135deg, #B38F00 0%, #937C02 20%, #736903 40%, #555704 60%, #384504 80%, #1B3300 100%)
-
+  position: relative
+  z-index: 100
   .footer-logo
     width: 120px
     height: 84px
@@ -100,3 +101,6 @@ footer
       li
         float: left
         margin-right: 20px
+
+body.transparent-footer footer
+  background: transparent
