@@ -1,0 +1,39 @@
+.FilterNav
+  list-style: none
+  padding: 0
+  overflow: hidden
+  margin: 15px auto
+  text-align: center
+  li
+    display: inline-block
+    a
+      width: auto
+      background: transparent
+      color: $col-secondary
+      display: block
+      padding: 10px 20px
+      border: 1px solid transparent
+      border-radius: 22px
+      margin: 5px
+      font-weight: bold
+      text-decoration: none
+      font-size: 13px
+      text-transform: uppercase
+      letter-spacing: 1px
+      transition: 0.2s ease all
+      &:hover
+        color: $col-link
+        border-color: $col-link
+
+.videos_index .FilterNav .all a,
+.videos_movies .FilterNav .movie a,
+.videos_shorts .FilterNav .short a,
+.videos_dubs .FilterNav .dub a,
+.videos_series .FilterNav .serie a,
+.series_index .FilterNav .serie a,
+  background: $col-primary
+  color: #fff
+  border-color: $col-primary
+  cursor: default
+  &:hover
+    border-color: $col-primary

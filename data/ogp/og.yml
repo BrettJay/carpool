@@ -1,0 +1,12 @@
+type: article
+image:
+  '': http://carpoolcrew.co/images/opengraph/og.jpg
+  type: image/jpg
+  width: 560
+  height: 300
+locale:
+  '': en_us
+twitter:
+  card: summary_large_image
+  site: '@carpool_studios'
+  creator: '@carpool_studios'

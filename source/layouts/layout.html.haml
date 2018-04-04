@@ -1,0 +1,72 @@
+!!! 5
+%html.no-js{lang: "en", class: (@dynamic_html_class if !@dynamic_html_class.blank?) }
+  %head
+    %meta{charset: "utf-8"}
+
+    %title= render_page_title
+    %meta{name: "description", content: meta_description}
+    %meta{name: "keywords", content: meta_keywords}
+    %meta{name: "author", content: data.config.site.author}
+
+    -# Generated Geo-Tags: http://www.geo-tag.de/generator
+    %meta{name: "DC.title", content: render_page_title}
+    -# %meta{name: "geo.region", content: "XX-XX"}
+    -# %meta{name: "geo.placename", content: "XXXXX"}
+    -# %meta{name: "geo.position", content: "XXXX;XXXX"}
+    -# %meta{name: "ICBM", content: "XXXX XXXX"}
+
+    -# Standard viewport tag to set the viewport to the device's width,
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
+
+    -# Stylesheets
+    = stylesheet_link_tag 'styles'
+
+    %link{rel: "author", href: "/humans.txt"}
+    
+    -# App Icons
+    %link{rel: "shortcut icon", href: "favicon.ico"}
+    %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Lato:300,400,700"}
+
+    - ogp_tags do| name, value |
+      - if name.include?("image")
+        - if !@ogp_image_path.present?
+          %meta{ property: name, content: value}
+      - else
+        %meta{ property: name, content: value}
+
+    - if @ogp_image_path.present?
+      %meta{property:"og:image",       content:"#{data.config.site.root_url}/images/opengraph/#{@ogp_image_path}/og.jpg"}
+      %meta{property:"fb:image",       content:"#{data.config.site.root_url}/images/opengraph/#{@ogp_image_path}/fb.jpg"}
+    
+    - if @twitter_label1.present? && @twitter_data1.present?
+      %meta{content: "#{@twitter_label1}", name: "twitter:label1"}
+      %meta{content: "#{@twitter_data1}",  name: "twitter:data1"}
+    - if @twitter_label2.present? && @twitter_data2.present?
+      %meta{content: "#{@twitter_label2}", name: "twitter:label2"}
+      %meta{content: "#{@twitter_data2}",  name: "twitter:data2"}
+
+  %body{class: current_page.data.body_classes || "page"}
+    = partial "layouts/header"
+    = yield
+    = partial "layouts/footer"
+
+    -# Load all Javascript at the end to avoid render-blocking
+    = javascript_include_tag "scripts"
+    %script{src:"https://code.jquery.com/jquery-2.2.4.min.js", integrity:"sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin:"anonymous"}
+      
+    :javascript
+      $(function() {
+        var flag = false;
+        $('#mobile-toggle').on(
+          {
+            'touchstart click' : function(){
+              if (!flag) {
+                flag = true;
+                $( ".carpool-header" ).toggleClass( "active" );
+                setTimeout(function(){ flag = false; }, 100);
+              }
+              return false
+            }
+          }
+        );
+      });

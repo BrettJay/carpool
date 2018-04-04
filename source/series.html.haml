@@ -1,0 +1,16 @@
+---
+  title: Series
+  body_classes: dark-header videos_series
+  meta_description:
+  meta_keywords:
+---
+
+.pt5
+  .Container.Primary.pt3.pb4
+    %h1.tc Videos
+
+    = partial "videos/nav"
+
+    .Row
+      - data.series.each do | series |
+        .Col.Col--series= partial("partials/series/card", locals: { series: series })

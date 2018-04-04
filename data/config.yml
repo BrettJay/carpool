@@ -1,0 +1,18 @@
+# Site wide settings
+site:
+  root_url: http://carpoolcrew.co
+  title: Carpool
+  title_separator: " &mdash; "
+  meta_description: Videos to amuse ourselves, that may also amuse you.
+  meta_keywords:
+    - videos
+    - comedy
+  author: Brett Jones
+  active_navigation_item_class: current
+  analytics_id: UA-XXXXXXX-XX
+
+# Author of CSS & JavaScript
+source:
+  author:
+    name: Brett Jones
+    uri: http://brett.cool

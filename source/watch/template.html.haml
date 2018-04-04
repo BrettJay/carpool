@@ -1,0 +1,68 @@
+---
+  body_classes: watch
+  meta_keywords:
+---
+
+- @dynamic_title = video.title
+- @dynamic_description = video.description
+- @ogp_image_path = "watch/#{video.slug}"
+
+- @twitter_label1 = '🗓 Released'
+- @twitter_data1  = video.release_date.strftime('%b %e, %Y')
+
+- @twitter_label2 = '🕓 Runtime'
+- @twitter_data2  = video.runtime
+
+.full-bleed-video
+  #video-player
+
+.Container.pt4.pb4
+  %h1.pb1
+    - if video.category == "serie"
+      #{video.series} — #{video.title}
+    - else
+      = video.title
+  .Details
+    .Detail_releaseDate= video.release_date.strftime('%b %e, %Y')
+    .pl2.Detail_runtime= video.runtime
+    .pl2.Detail_related
+      - if video.category == "serie"
+        Series: #{link_to video.series, watch_series_link(video)}
+      - else
+        Category: #{link_to video.category.humanize, "/videos/#{video[:category]}s.html"}
+
+  :markdown
+    #{video.description}
+
+  %h2.pt3 Cast and Crew
+  .Row.cf
+    - video.credits.each_with_index do |credit|
+      %dl.credit{class: credit.slug }
+        - if credit.slug.present?
+          = image_tag("credits/#{credit.slug}.jpg", width: "60", height: "60")
+        %dt= credit.name
+        %dd= credit.description
+
+=# partial 'watch/related_videos'
+
+:javascript
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-player', {
+      playerVars: {
+        modestbranding: '1',
+        showinfo: '0'
+      },
+      height: '390',
+      width: '640',
+      modestbranding: '1',
+      showinfo: '0',
+      videoId: "#{video.youtube_id}"
+    });
+  }

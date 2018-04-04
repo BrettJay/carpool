@@ -1,0 +1,47 @@
+---
+  body_classes: series 
+  meta_keywords:
+---
+
+- @dynamic_title = series.title
+- @dynamic_description = series.description
+- @ogp_image_path = "series/#{series.slug}"
+
+- @twitter_label1 = 'Episodes'
+- @twitter_data1  = series.videos
+
+.series-cover
+
+.Container.Primary.pt5.pb4
+  .pt5
+    .SeriesInformation.cf.pt2
+      .SeriesPoster= image_tag("series/#{series.slug}_card.jpg", alt: series.title)
+      .SeriesDetails.pl3
+        %ul.Breadcrumbs.pt3
+          %li= link_to 'Videos', '/videos/'
+          %li= link_to 'Series', '/series'
+        %h1.pt1.pb2= series.title
+        %p= series.description
+      
+  .pt3
+    .SeriesInformation
+      %h3 #{series.videos} Episodes
+    .Row
+      - data.videos.reverse.each do | video |
+        - if video.series == series.title
+          .Col.Col--video= partial("partials/video/card", locals: { video: video })
+
+
+:css
+  body, .series-cover {
+    background: rgba(#{series.colour}, 1);
+  }
+  .SeriesPoster img {
+    box-shadow: 0 2px 4px rgba(#{series.colour}, 0.7), 0 1px 14px rgba(#{series.colour}, 0.3);
+  }
+  .series-cover {
+    background: url(/images/series/#{series.slug}_banner.jpg) top center no-repeat;
+    background-size: cover;
+  }
+  .series-cover:after {
+    background-image: -webkit-linear-gradient(top, rgba(#{series.colour}, 0) 0%, rgba(#{series.colour}, 1) 100%);  }

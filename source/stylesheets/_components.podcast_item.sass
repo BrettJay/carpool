@@ -1,0 +1,46 @@
+.PodcastItem
+  color: inherit
+  text-decoration: none
+  display: block
+  background: #fff
+  transition: background 0.2s ease
+  +respond-to(small-up)
+    border-left: 1px solid #eee
+  .Podcast_episode
+    +fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 13px)
+    color: $col-tertiary
+  .Podcast_title
+    +fluid-scale(font-size, $responsive_min, $responsive_max, 15px, 21px)
+    margin: 0
+    font-weight: 400
+  .Podcast_description
+    +fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 16px)
+    margin: 0
+
+a.PodcastItem:hover
+  background: #F0F7FF
+.PodcastItem + .PodcastItem
+  border-top: 1px solid #eee
+
+.PodcastItem--singular
+  border-left: 1px solid #ffffff
+
+.PodcastGroup
+  background: #fff
+
+.PodcastMeta
+  float: left
+  width: 40%
+  img
+    width: 100%
+    display: block
+
+.PodcastList
+  margin-left: 40%
+
++respond-to(mobile)
+  .PodcastMeta
+    float: none
+    width: 100%
+  .PodcastList
+    margin-left: 0

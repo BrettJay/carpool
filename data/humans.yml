@@ -1,0 +1,28 @@
+# humans.txt content - more information here: http://humanstxt.org/
+team:
+  - name: David Morgan–Brown
+    role: Organiser
+    contact: ""
+  - name: Michael Butcher
+    role: Organiser
+    contact: ""
+  - name: Brett Jones
+    role: Organiser
+    contact: "@brett_jay"
+
+languages:
+  - English
+
+standards_used:
+  - CSS3
+  - HTML5
+  - JavaScript
+
+components_used:
+  - Apache Server Configs
+  - Modernizr
+  - Normalize.css
+  - html5shiv
+
+software_used:
+  - Sublime Text

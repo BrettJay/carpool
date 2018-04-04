@@ -1,0 +1,38 @@
+//= require normalize.css/normalize.css
+
+/*!
+  Author:       <%= data.config.source.author.name %>
+  Author URI:   <%= data.config.source.author.uri %>
+  */
+
+@import "settings.global";
+@import "settings.colour";
+
+@import "tools.fluid_scale";
+@import "tools.respond_to";
+@import "tools.mixins";
+
+@import "base.page";
+@import "base.typography";
+
+@import "components.breadcrumbs";
+@import "components.container";
+@import "components.feature";
+@import "components.footer";
+@import "components.grid";
+@import "components.header";
+@import "components.filter_nav";
+@import "components.video.card";
+@import "components.video.credits";
+@import "components.video.player";
+@import "components.video.metadata";
+@import "components.series.card";
+@import "components.podcast_item";
+
+@import "page.series";
+
+@import "utilities.spacing";
+
+.tc {
+  text-align: center;
+}

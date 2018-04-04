@@ -1,0 +1,162 @@
+.carpool-header
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 10000
+  color: #fff
+  transition: background 0.2s ease, box-shadow 0.2s ease
+  .header-content
+    padding-left: 20px
+    padding-right: 20px
+    height: 80px
+    +respond-to(small-down)
+      width: 100%
+      height: 60px
+      padding-left: 10px
+      padding-right: 10px
+
+  .carpool-logo
+    height: 0
+    margin: 0
+    overflow: hidden
+    background: image-url('logo/header.png') 0 0 no-repeat
+    position: absolute
+    width: 174px
+    padding: 35px 0 0
+    background-size: 174px
+    top: 22px
+    transition: background 0.2s ease, left 0.2s ease
+    +respond-to(small-down)
+      top: 12px
+
+  .mobile-menu
+    line-height: 1.538
+    float: right
+    text-transform: uppercase
+    font-size: 13px
+    padding: 5px 8px
+    border: 1px solid currentColor
+    margin: 14px 0
+    border-radius: 2px
+    min-width: 60px
+    transition: background 0.2s ease, color 0.2s ease
+    &:hover
+      background: rgba(255,255,255,0.3)
+      cursor: pointer
+    .icon:before
+      width: 16px
+      text-align: center
+      text-rendering: geometricPrecision
+      content: "☰"
+      display: inline-block
+    .label:before
+      content: "Menu"
+    +respond-to(ipad-up)
+      display: none
+
+  .primary-menu
+    font-size: 16px
+    display: none
+    line-height: 5
+    +respond-to(ipad-up)
+      margin: 0
+      display: block
+      float: right
+    ul
+      list-style: none
+      padding: 0
+      margin: 0 -10px
+      overflow: hidden
+      +respond-to(small-down)
+        background: rgba(0,0,0,0.6)
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(255,255,255,0.2)
+    li
+      float: left
+      +respond-to(small-down)
+        width: 50%
+        text-align: center
+        &:nth-child(1)
+          box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2), inset -1px 0 0 rgba(255,255,255,0.2)
+        &:nth-child(2)
+          box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2)
+        &:nth-child(3)
+          box-shadow: inset -1px 0 0 rgba(255,255,255,0.2)
+        &:nth-child(5)
+          width: 100%
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.2)
+    a
+      color: #fff
+      text-decoration: none
+      transition: color 0.2s ease
+      +respond-to(ipad-up)
+        margin: 0 0 0 32px
+
+    a:hover, ul .current a
+      border-bottom: 2px solid currentColor
+    a:focus, a:active
+      outline: 0 none
+
+  &.active
+    +respond-to(small-down)
+      background: rgba(0,0,0,0.4)
+      height: auto
+      .mobile-menu
+        .icon:before
+          content: "✕︎"
+        .label:before
+          content: "close"
+      &.scroll-triggered
+        background: rgba(255,255,255,0.96)
+      .primary-menu
+        display: block
+        padding: 60px 0 0
+
+.videos_movies,
+.videos_shorts,
+.videos_index,
+.videos_dubs,
+.videos_series
+  .carpool-header .primary-menu a.videos
+    border-bottom: 2px solid currentColor
+
+.page_podcast .carpool-header .primary-menu a.podcast,
+.watch .carpool-header .primary-menu a.videos,
+.series .carpool-header .primary-menu a.videos
+  border-bottom: 2px solid currentColor
+
+// Watch page
+.watch
+  .carpool-header
+    background-image: linear-gradient(-180deg, rgba(0,0,0,0.57) 0%, rgba(0,0,0,0.01) 100%)
+    transition: opacity 0.2s ease
+    opacity: 0
+
+    .carpool-logo
+      opacity: 0.175
+      transition: opacity 0.2s ease
+      z-index: 3
+    nav
+      opacity: 0
+      position: relative
+      z-index: 3
+      transition: opacity 0.2s ease
+
+    // video is paused or header is hovered
+  &.is-paused .carpool-header,
+  .carpool-header:hover
+    opacity: 1
+    .carpool-logo, nav
+      opacity: 1
+
+.dark-header
+  .carpool-header
+    .carpool-logo
+      background-position: 0 -35px
+    .primary-menu a
+      color: $col-link
+    .mobile-menu
+      color: $col-link
+  .carpool-header.active .mobile-menu,
+  .carpool-header.active .primary-menu a
+    color: #ffffff !important

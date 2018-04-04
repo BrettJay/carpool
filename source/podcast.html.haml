@@ -1,0 +1,21 @@
+---
+  title: Podcast
+  body_classes: dark-header page_podcast
+  meta_description: Driving Drunk with Carpool is an occasional podcast with David Morgan-Brown, Michael Butcher, and Brett Jones.
+  meta_keywords:
+---
+
+- @ogp_image_path = "podcast"
+
+.pt5.pb5
+  .Container.pt3.pb4
+    %h1.tc.pb3 Driving Drunk with Carpool
+    .PodcastGroup.cf
+      .PodcastMeta
+        = image_tag 'podcast.jpg', alt: 'Driving Drunk with Carpool'
+      .PodcastList
+        - data.podcast.each do | episode |
+          = link_to "/podcast/#{episode.slug}/", class: 'pt3 pb3 pl3 pr3 PodcastItem' do
+            .Podcast_episode Episode #{episode.number} — #{episode.date.strftime("%B %d, %Y")}
+            %h2.Podcast_title.pt1.pb1= episode.title
+            %p.Podcast_description= episode.description

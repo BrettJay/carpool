@@ -1,0 +1,26 @@
+---
+  body_classes: dark-header page_podcast
+  meta_keywords:
+---
+
+- @dynamic_title = episode.title
+- @dynamic_description = episode.description
+
+- @twitter_label1 = '🗓 Released'
+- @twitter_data1  = episode.date.strftime('%b %e, %Y')
+
+- @twitter_label2 = 'Episode'
+- @twitter_data2  = episode.number
+
+.pt5.pb5
+  .Container.pt3.pb5
+    %h1.pb3.tc Driving Drunk with Carpool
+    .PodcastGroup.cf
+      .PodcastMeta
+        = image_tag 'podcast.jpg', alt: 'Driving Drunk with Carpool'
+      .PodcastList
+        .PodcastItem.PodcastItem--singular.pl3.pr3.pt3.pb3
+          .Podcast_episode Episode #{episode.number} — #{episode.date.strftime("%B %d, %Y")}
+          %h2.Podcast_title.pt1.pb1= episode.title
+          %p.Podcast_description.pb2= episode.description
+          %iframe{frameborder: "0", height: "36px", scrolling: "no", seamless: "", src: "https://simplecast.fm/e/#{episode.embed}?style=light", width: "100%"}

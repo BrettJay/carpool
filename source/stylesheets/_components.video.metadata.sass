@@ -1,0 +1,23 @@
+.VideoMetadata_item
+  float: left
+  margin: 0
+  dt,
+  dd
+    margin: 0
+    line-height: 1.3
+  a
+    color: $col-secondary
+    text-decoration: none
+    transition: 0.2s ease color
+  a:hover
+    color: $col-link
+  dt
+    +fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 14px)
+    color: $col-secondary
+  dd
+    +fluid-scale(font-size, $responsive_min, $responsive_max, 13px, 16px)
+    color: $col-secondary
+
+
+.VideoMetadata_item + .VideoMetadata_item
+  +fluid-scale(padding-left, $responsive_min, $responsive_max, $size_scale_2_min, $size_scale_2_max)

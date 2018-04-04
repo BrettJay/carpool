@@ -1,0 +1,9 @@
+- data.feature.each do | feature |
+  .Feature.pt4
+    = link_to "watch/#{feature.slug}", class: 'pt4 pb4' do
+      .Container.pt4
+        .Feature_subtitle.pt4.pb1 #{feature.subtitle}
+        %h1.Feature_title.pb2 #{feature.title}
+        %p.Feature_description.pb3 #{feature.description}
+        .Feature_button Watch Now &rarr;
+    = image_tag("videos/#{feature.slug}.jpg", class: 'Feature_background')

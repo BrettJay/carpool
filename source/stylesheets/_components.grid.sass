@@ -1,0 +1,36 @@
+.Row
+  margin: 0 -20px
+  display: flex
+  flex-wrap: wrap
+  +respond-to(small)
+    margin: 0
+
+.Col
+  padding: 20px
+  +respond-to(small)
+    padding: 0
+
+.Col--video, .Col--series
+  flex: 0 0 100%
+  padding: 10px 20px
+  +respond-to(ipad-up)
+    flex: 0 0 50%
+    padding: 20px
+  +respond-to(large)
+    flex: 0 0 33.3333%
+    
+.Row--recent
+  .Col--video, .Col--series
+    +respond-to(large)
+      &:nth-child(4n)
+        display: none
+
+.Col--50
+  padding: 0 20px
+  +respond-to(medium-up)
+    padding: 20px
+    flex: 0 0 50%
+.Col--crew
+  flex: 0 0 33.3333%
+  +respond-to(small-only)
+    flex: 0 0 100%

@@ -1,0 +1,17 @@
+---
+  body_classes: dark-header
+  meta_description:
+  meta_keywords:
+---
+
+- @dynamic_title = "#{category.category.humanize}s"
+- @dynamic_html_class = "videos_#{category.category}s"
+
+.pt5
+  .Container.pt3.Primary.pb4
+    %h1.tc Videos
+    = partial "videos/nav"
+    .Row
+      - data.videos.each do | video |
+        - if video.category == category.category
+          .Col.Col--video= partial("partials/video/card", locals: { video: video })

@@ -1,0 +1,52 @@
+body.series
+  footer
+    background: transparent
+  
+  h1
+    font-weight: 400
+    margin: 0
+  .SeriesInformation
+    h1, h2, h3
+      color: #fff
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7)
+    p
+      color: rgba(255,255,255,0.8)
+      margin: 0
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7)
+
+  .series-cover
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    right: 0
+    padding-bottom: 56.25%
+    overflow: hidden
+  
+  .Primary
+    position: relative
+    z-index: 100
+
+  .series-cover:after
+    content: ""
+    display: block
+    top: 0
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+
+  .SeriesPoster
+    max-width: 200px
+    float: left
+    width: 20%
+    img
+      width: 100%
+      vertical-align: middle
+  
+  .SeriesDetails
+    width: 80%
+    float: left

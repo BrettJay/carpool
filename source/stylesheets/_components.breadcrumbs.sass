@@ -1,0 +1,22 @@
+.Breadcrumbs
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    display: inline
+  a
+    color: $col-secondary
+    text-decoration: none
+    &:after
+      content: '›'
+      padding: 0 4px 0 8px
+  a:hover
+    color: $col-link
+  
+
+.series .Breadcrumbs
+  a
+    color: rgba(255,255,255,0.8)
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7)
+  a:hover
+  color: rgba(255,255,255,1)

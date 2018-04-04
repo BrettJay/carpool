@@ -1,0 +1,102 @@
+footer
+  background-color: #666300
+  background: linear-gradient(135deg, #B38F00 0%, #937C02 20%, #736903 40%, #555704 60%, #384504 80%, #1B3300 100%)
+
+  .footer-logo
+    width: 120px
+    height: 84px
+    float: left
+    margin: 18px 0
+    vertical-align: middle
+    display: block
+  .internal
+    padding: 35px 0 35px 20px
+    margin: 0 0 0 20px
+    border-left: 1px solid rgba(255,255,255,0.1)
+    font-size: 14px
+    float: left
+    +respond-to(small-down)
+      margin: 0 0 0 80px
+      float: none
+    nav
+      margin-bottom: 10px
+      line-height: 20px
+      overflow: hidden
+    ul,
+      list-style: none
+      margin: 0
+      padding: 0
+    li
+      margin: 0
+      padding: 0
+      display: block
+      float: left
+    a, .soon
+      color: rgba(255,255,255,0.5)
+      text-decoration: none
+      display: block
+      float: left
+      margin-right: 14px
+      transition: 0.2s ease color
+
+    a:active,
+    a:focus
+      outline: none
+    .is-current a, a:hover
+      color: #fff
+    .soon
+      color: rgba(255,255,255,0.4)
+    small
+      font-size: 11px
+      line-height: 20px
+      color: rgba(255,255,255,0.50)
+  .external
+    float: right
+    h4
+      font-size: 11px
+      color: #FFFFFF
+      line-height: 1.363636364
+      letter-spacing: 1px
+      margin: 0 0 7px
+      text-transform: uppercase
+    ul
+      margin: 0
+      padding: 0 0 0 1px
+      list-style: none
+      overflow: hidden
+    li
+      background: image-url('social.png') 0 0 no-repeat
+      background-size: 30px 90px
+      height: 30px
+      font-size: 13px
+      line-height: 2.3
+      &.facebook
+        background-position: 0 -30px
+      &.twitter
+        background-position: 1px -60px
+      a
+        color: rgba(255,255,255,0.6)
+        text-decoration: none
+        display: block
+        padding-left: 22px
+        transition: 0.2s ease color
+        span
+          color: rgba(254,255,255,0.40)
+        &:hover
+          color: #fff
+
+  +respond-to(small-down)
+    .footer-logo
+      width: 60px
+      height: 42px
+      margin: 37px 0 0
+    span
+      display: none
+    .external
+      float: left
+      margin-left: 80px
+      padding: 16px 0 35px 20px
+      border-left: 1px solid rgba(255,255,255,0.1)
+      li
+        float: left
+        margin-right: 20px

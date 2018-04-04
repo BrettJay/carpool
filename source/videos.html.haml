@@ -1,0 +1,14 @@
+---
+  title: Videos
+  body_classes: dark-header videos_index
+  meta_description:
+  meta_keywords:
+---
+
+.pt5
+  .Container.pt3.Primary.pb4
+    %h1.tc Videos
+    = partial "videos/nav"
+    .Row
+      - data.videos.each do | video |
+        .Col.Col--video= partial("partials/video/card", locals: { video: video })

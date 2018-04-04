@@ -1,0 +1,43 @@
+---
+  title: Videos we make to amuse ourselves, that may also amuse you
+  body_classes: home
+  meta_description:
+  meta_keywords:
+---
+
+- recent_videos = data.videos.take(4)
+- recent_series = data.series.take(4)
+- podcast_episode = data.podcast.first
+
+= partial 'index/feature'
+
+.Container.pt4.pb4
+  .cf
+    = link_to 'All videos &rarr;', '/videos', class: 'aside_link'
+    %h2 Latest videos
+  
+  .Row.Row--recent
+    - recent_videos.each do | video |
+      .Col.Col--video= partial("partials/video/card", locals: { video: video })
+  
+  .cf
+    = link_to 'All series &rarr;', '/series', class: 'aside_link'
+    %h2 Series
+  
+  .Row.Row--recent
+    - recent_series.each do | series |
+      .Col.Col--series= partial("partials/series/card", locals: { series: series })
+
+  .cf
+    = link_to 'All episodes &rarr;', '/podcast', class: 'aside_link'
+    %h2 From the podcast
+
+  .PodcastGroup.cf
+    .PodcastMeta
+      = image_tag 'podcast.jpg', alt: 'Driving Drunk with Carpool'
+    .PodcastList
+      .PodcastItem.PodcastItem--singular.pl3.pr3.pt3.pb3
+        .Podcast_episode Episode #{podcast_episode.number} — #{podcast_episode.date.strftime("%B %d, %Y")}
+        %h2.Podcast_title.pt1.pb1= podcast_episode.title
+        %p.Podcast_description.pb2= podcast_episode.description
+        %iframe{frameborder: "0", height: "36px", scrolling: "no", seamless: "", src: "https://simplecast.fm/e/#{podcast_episode.embed}?style=light", width: "100%"}

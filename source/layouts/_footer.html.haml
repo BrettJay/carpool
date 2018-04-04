@@ -1,0 +1,20 @@
+%footer.cf.pt5.pb5{role: "contentinfo"}
+  .Container.cf
+    = image_tag 'logo/footer.png', class: 'footer-logo'
+    .internal.cf
+      %nav
+        = partial 'layouts/partials/nav'
+      %small
+        &copy; 2005 &ndash; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Carpool Studios
+    .external
+      %h4 Elsewhere
+      %ul
+        %li.youtube
+          = link_to "http://youtube.com/carpoolstudios" do
+            <span>youtube.com/</span>carpoolstudios
+        %li.facebook
+          = link_to "https://facebook.com/carpoolcrew" do
+            <span>facebook.com/</span>carpoolcrew
+        %li.twitter
+          = link_to "https://twitter.com/carpool_studios" do
+            <span>twitter.com/</span>carpool_studios

@@ -1,0 +1,6 @@
+.series-item
+  = link_to series_link(series), class: 'thumb' do
+    = image_tag("series/#{series.slug}_card.jpg", alt: series.title)
+    .series-caption
+      %small.category=  "#{series.videos} episodes"
+      %h2.title= series.title
