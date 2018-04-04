@@ -31,6 +31,9 @@
       - if name.include?("image")
         - if !@ogp_image_path.present?
           %meta{ property: name, content: value}
+      - elsif name.include?("label") || name.include?("data")
+        - if !@twitter_label1.present? && !@twitter_label2.present? && !@twitter_data1.present? && !@twitter_data2.present?
+          %meta{ property: name, content: value}
       - else
         %meta{ property: name, content: value}
 
