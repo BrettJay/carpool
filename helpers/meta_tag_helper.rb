@@ -37,9 +37,7 @@ module MetaTagHelper
   private
 
   def set_meta_keywords
-    if !@dynamic_description.blank?
-      @dynamic_description
-    elsif data.page.meta_keywords.blank?
+    if data.page.meta_keywords.blank?
       data.config.site.meta_keywords
     else
       data.page.meta_keywords
@@ -47,7 +45,9 @@ module MetaTagHelper
   end
 
   def set_description
-    if data.page.meta_description.blank?
+    if !@dynamic_description.blank?
+      @dynamic_description
+    elsif data.page.meta_description.blank?
       data.config.site.meta_description
     else
       data.page.meta_description
