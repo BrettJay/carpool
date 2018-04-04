@@ -66,6 +66,10 @@ data.series.each do | series |
   proxy "/series/#{series.slug}.html", "/series/template.html", :locals => { :series => series }, :ignore => true
 end
 
+data.crew.each do | crew |
+  proxy "/about/#{crew[:slug]}.html", "/about/template.html", :locals => { :crew => crew }, :ignore => true
+end
+
 # --------------------------------------------------------------------------------------------------
 # Paths
 # --------------------------------------------------------------------------------------------------

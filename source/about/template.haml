@@ -1,0 +1,50 @@
+---
+body_classes: transparent-footer light-body page_about
+---
+
+- @dynamic_title = crew.name
+- @dynamic_description = truncate(crew.bio, length: 155, omission: "...")
+
+- @ogp_image_path = "crew/#{crew.slug}"
+
+- @twitter_label1 = 'Name'
+- @twitter_data1  = crew.name
+
+- @twitter_label2 = 'Role'
+- @twitter_data2  = crew.roles
+
+.cover
+
+.Container.Primary.pt5.pb4
+  .pt5
+    .pt2
+      %ul.Breadcrumbs.pt1
+        %li= link_to 'About', '/about/'
+      %h1.pt1.pb1= crew.name
+      %p.subtitle.pb2= crew.roles
+    .pt2
+      :markdown
+        #{crew.bio}
+
+:css
+  html, body, .cover {
+    background: rgba(#{crew.colour}, 1);
+  }
+  .cover {
+    background-image: url(/images/crew/#{crew.slug}_banner.jpg);
+    background-size: cover;
+  }
+  .cover:after {
+    background-image: -webkit-linear-gradient(top, rgba(#{crew.colour}, 0) 0%, rgba(#{crew.colour}, 1) 100%);
+  }
+
+  h1 {
+    margin: 0;
+  }
+  .subtitle {
+    margin: 0;
+  }
+  p {
+    max-width: 40em;
+    width: 80%;
+  }

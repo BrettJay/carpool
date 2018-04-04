@@ -20,3 +20,12 @@
         Their stint was not to last however. While on duty, the three founding members of Carpool stepped on landmines (on three separate occasions) and were killed.
 
     %h2.tc.pt3 The Carpool Crew
+
+    .Row
+      - data.crew.each do | crew |
+        .Col.Col--crew
+          = link_to crew_link(crew) do
+            .carpool-crew{class: crew.slug }
+              %dl.profile
+                %dt.name= crew.name
+                %dd.role= crew.roles

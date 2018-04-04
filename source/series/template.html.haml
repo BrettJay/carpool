@@ -1,5 +1,5 @@
 ---
-  body_classes: series 
+  body_classes: series transparent-footer light-body
   meta_keywords:
 ---
 
@@ -10,7 +10,7 @@
 - @twitter_label1 = 'Episodes'
 - @twitter_data1  = series.videos
 
-.series-cover
+.cover
 
 .Container.Primary.pt5.pb4
   .pt5
@@ -33,15 +33,15 @@
 
 
 :css
-  body, .series-cover {
+  body, .cover {
     background: rgba(#{series.colour}, 1);
   }
   .SeriesPoster img {
     box-shadow: 0 2px 4px rgba(#{series.colour}, 0.7), 0 1px 14px rgba(#{series.colour}, 0.3);
   }
-  .series-cover {
+  .cover {
     background: url(/images/series/#{series.slug}_banner.jpg) top center no-repeat;
     background-size: cover;
   }
-  .series-cover:after {
+  .cover:after {
     background-image: -webkit-linear-gradient(top, rgba(#{series.colour}, 0) 0%, rgba(#{series.colour}, 1) 100%);  }
