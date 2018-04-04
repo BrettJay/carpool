@@ -25,13 +25,8 @@ module MetaTagHelper
 
     raise 'You must provide a meta description for your site/page!' if description.blank?
 
-    if description.length > 160
-      description_too_long = 'Meta description too long!'
-      description_too_long << ' Should be between 150-160 characters.'
-      description_too_long << " You have: #{description.length}."
-      raise description_too_long
-    end
-    description
+    truncate(description, length: 155, omission: "...")
+    
   end
 
   private
