@@ -2,7 +2,7 @@
 site:
   root_url: http://carpoolcrew.co
   title: Carpool
-  title_separator: " &mdash; "
+  title_separator: " - "
   meta_description: Videos to amuse ourselves, that may also amuse you.
   meta_keywords:
     - videos

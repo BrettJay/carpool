@@ -27,7 +27,7 @@
     %link{rel: "shortcut icon", href: "favicon.ico"}
     %link{rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Lato:300,400,700"}
 
-    %meta{property:"og:title",       content: "Carpool" }
+    %meta{property:"og:title",       content: render_page_title }
     %meta{property:"og:description", content: meta_description }
     - ogp_tags do| name, value |
       - if name.include?("image")
