@@ -26,7 +26,6 @@
     padding: 35px 0 0
     background-size: 174px
     top: 22px
-    transition: background 0.2s ease, left 0.2s ease
     +respond-to(small-down)
       top: 12px
 
@@ -102,13 +101,13 @@
     +respond-to(small-down)
       background: rgba(0,0,0,0.4)
       height: auto
+      .carpool-logo
+        background-position: 0 0 !important
       .mobile-menu
         .icon:before
           content: "✕︎"
         .label:before
           content: "close"
-      &.scroll-triggered
-        background: rgba(255,255,255,0.96)
       .primary-menu
         display: block
         padding: 60px 0 0
