@@ -31,10 +31,11 @@
   z-index: 0
   top: 0
   left: 0
+  bottom: 0
+  right: 0
   width: 100%
-  +respond-to(ipad-down)
-    width: 140%
-    left: -20%
+  height: 100%
+  object-fit: cover
 
 .Feature_subtitle
   +fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 13px)
@@ -52,7 +53,7 @@
   +fluid-scale(font-size, $responsive_min, $responsive_max, 14px, 19px)
   margin: 0 auto
   line-height: 1.67
-  
+
   +respond-to(ipad-up)
     width: 80%
 

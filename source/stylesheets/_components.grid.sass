@@ -4,7 +4,7 @@
   flex-wrap: wrap
   +respond-to(small)
     margin: 0
-
+      
 .Col
   padding: 20px
   +respond-to(small)
@@ -18,7 +18,15 @@
     padding: 20px
   +respond-to(large)
     flex: 0 0 33.3333%
-    
+
+.Row--series
+  +respond-to(small-down)
+    margin-left: -5px
+    margin-right: -5px
+    .Col--series
+      flex: 0 0 50%
+      padding: 5px
+
 .Row--recent
   .Col--video, .Col--series
     +respond-to(large)
