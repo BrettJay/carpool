@@ -1,13 +1,13 @@
 .media-item
-  = link_to watch_link(video), class: 'thumb' do
+  = link_to watch_link(slug), class: 'thumb' do
     .thumb-details
       .runtime
         = video.runtime
-    = image_tag("videos/#{video.slug}.jpg")
+    = image_tag("videos/#{slug}.jpg")
   -if video.category == "serie"
     .video-subtitle= link_to video.series, watch_series_link(video)
   -else 
     .video-subtitle= link_to video.category.humanize, category_link(video)
-  %h2.title= link_to video.title, watch_link(video)
+  %h2.title= link_to video.title, watch_link(slug)
   %p.description= video.description
   %small.meta Released: #{video.release_date.strftime('%B %e, %Y')}

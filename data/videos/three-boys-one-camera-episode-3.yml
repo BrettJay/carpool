@@ -1,0 +1,25 @@
+title: Episode 3
+slug: three-boys-one-camera-episode-3
+youtube_id: _FQHkAbesCk
+release_date: 2015-02-24
+category: serie
+runtime: '00:05:10'
+series: Three Boys, One Camera
+series_slug: three-boys-one-camera
+description: Picking up where they left off before Michael's untimely death, the boys contemplate making a new funny video, only to realise they'll need to call in the help of some external talent...
+credits:
+  - name: Michael Butcher
+    description: Starring, Writing, Additional camera
+    slug: michael
+  - name: David Morgan-Brown
+    description: Starring, Writing
+    slug: david
+  - name: Brett Jones
+    description: Starring, Editing, Additional camera
+    slug: brett
+  - name: Aiden Thomas
+    description: Starring
+    slug: aiden
+  - name: Joshua Goyder
+    description: Camera
+    slug: joshua

@@ -27,9 +27,8 @@
     .SeriesInformation
       %h3 #{series.videos} Episodes
     .Row
-      - data.videos.reverse.each do | video |
-        - if video.series == series.title
-          .Col.Col--video= partial("partials/video/card", locals: { video: video })
+      - videos_in_series(series.slug).each do | slug, video |
+        .Col.Col--video= partial("partials/video/card", locals: { slug: slug, video: video })
 
 
 :css

@@ -1,0 +1,28 @@
+title: Edgeman
+slug: edgeman
+youtube_id: sd4GVb0TA7A
+release_date: 2016-08-31
+category: serie
+series: Horrible Highschool Films
+series_slug: horrible-highschool-films
+runtime: '00:06:21'
+description: We found yet another floppy disk that contained this short film project the Carpool crew made back in year 12... Try to enjoy.
+credits:
+  - name: David Morgan-Brown
+    description: Writer, Editor
+    slug: david
+  - name: Michael Butcher
+    description: Edgeman
+    slug: michael
+  - name: Brett Jones
+    description: Camera
+    slug: brett
+  - name: Aiden Thomas
+    description: Rodney
+    slug: aiden
+  - name: Austen Mengler
+    description: Dr Antag
+    slug: austen
+  - name: Caitlin Clough
+    description: Edgeman’s EX–girlfriend
+    slug: caitlin

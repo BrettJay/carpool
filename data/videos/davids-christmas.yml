@@ -1,0 +1,17 @@
+title: David’s Christmas
+slug: davids-christmas
+youtube_id: CppZb_itfGQ
+release_date: 2016-12-21
+category: short
+runtime: '00:04:06'
+description: T’was the night before Christmas, and David and Brett were making their Christmas wishes...
+credits:
+  - name: David Morgan-Brown
+    description: Starring
+    slug: david
+  - name: Michael Butcher
+    description: Starring, Writing
+    slug: michael
+  - name: Brett Jones
+    description: Starring, Camera, Editing
+    slug: brett

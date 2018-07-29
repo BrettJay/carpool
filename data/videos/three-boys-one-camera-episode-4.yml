@@ -1,0 +1,22 @@
+title: Too Many Uncles
+slug: three-boys-one-camera-episode-4
+youtube_id: je94kqn0I4s
+release_date: 2015-06-22
+category: serie
+runtime: '00:06:11'
+series: Three Boys, One Camera
+series_slug: three-boys-one-camera
+description: "In this thrilling addition to Three Boys One Camera, we go behind the scenes of the latest and greatest comedy classic to come from Carpool Studios: Too Many Uncles!"
+credits:
+  - name: Michael Butcher
+    description: Starring, Writing, Editing
+    slug: michael
+  - name: David Morgan-Brown
+    description: Starring, Writing
+    slug: david
+  - name: Brett Jones
+    description: Starring, Additional camera
+    slug: brett
+  - name: Caitlin Clough
+    description: Camera
+    slug: caitlin

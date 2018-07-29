@@ -5,7 +5,6 @@
   meta_keywords:
 ---
 
-- recent_videos = data.videos.take(4)
 - recent_series = data.series.take(4)
 - podcast_episode = data.podcast.first
 
@@ -17,8 +16,8 @@
     %h2 Latest videos
   
   .Row.Row--recent
-    - recent_videos.each do | video |
-      .Col.Col--video= partial("partials/video/card", locals: { video: video })
+    - recent_videos.each do | slug, video |
+      .Col.Col--video= partial("partials/video/card", locals: { slug: slug, video: video })
   
   .cf
     = link_to 'All series &rarr;', '/series', class: 'aside_link'

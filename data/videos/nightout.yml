@@ -1,0 +1,20 @@
+title: Nightout
+slug: nightout
+youtube_id: pDqfvuNXKwA
+release_date: 2016-06-06
+category: movie
+runtime: '00:07:46'
+description: After returning home to his flat after a long absence, Nigel is greeted by his flat-mates Rhys and Dylan who eagerly try to convince him to go out with them clubbing — but it obviously won't go to plan.
+credits:
+  - name: Michael Butcher
+    description: Nigel
+    slug: michael
+  - name: David Morgan-Brown
+    description: Dylan, Writing, Editing
+    slug: david
+  - name: Brett Jones
+    description: Camera
+    slug: brett
+  - name: Aiden Thomas
+    description: Rhys
+    slug: aiden
