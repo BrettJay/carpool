@@ -19,15 +19,15 @@
 .Container.pt4.pb4
   %h1.pb1
     - if video.category == "serie"
-      #{video.series} — #{video.title}
+      #{series_title_for(video.series)} — #{video.title}
     - else
       = video.title
   .Details
-    .Detail_releaseDate= video.release_date.strftime('%b %e, %Y')
-    .pl2.Detail_runtime= video.runtime
+    .Detail_releaseDate Released: #{video.release_date.strftime('%b %e, %Y')}
+    .pl2.Detail_runtime Runtime: #{video.runtime}
     .pl2.Detail_related
       - if video.category == "serie"
-        Series: #{link_to video.series, watch_series_link(video)}
+        Series: #{link_to series_title_for(video.series), series_link(video.series)}
       - else
         Category: #{link_to video.category.humanize, "/videos/#{video[:category]}s.html"}
 

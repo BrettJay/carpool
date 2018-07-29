@@ -12,6 +12,11 @@ module VideoHelper
   end
 
   def videos_in_series(series)
-    videos.select{ |slug, video | video.series_slug == series }.reverse
+    videos.select{ |slug, video | video.series == series }.reverse
+  end
+
+  def series_title_for(slug)
+    series = data.series.select{ | series | series.slug == slug }
+    series[0].title
   end
 end
