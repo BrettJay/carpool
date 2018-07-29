@@ -1,17 +1,17 @@
 title: Episode 6
-youtube_id: DAxof63tPgM
-release_date: 2016-05-20
+youtube_id: HL1IbF-dpd8
+release_date: 2017-12-05
 category: serie
-runtime: '00:14:39'
 series: three-boys-one-camera
-description: Shock! Surprise! Twist! David isn't dead, ge merely sustained enough brain damage to make him believe he’s some sort of spirit guru! Now he wants to to shut Carpool down, what are Brett and Butcher to do?
+runtime: '00:13:12'
+description: The Carpool crew’s tireless efforts have been recognised, and now their movie has been green lit! But tensions between Butcher and Brett begin to rise, as New David manipulates the situation to create true authenticity for his vision.
 credits:
-  - name: Michael Butcher
-    description: Starring, Writing, Editing
-    slug: michael
   - name: David Morgan-Brown
-    description: Starring, Writing
+    description: Writing, Editing
     slug: david
+  - name: Michael Butcher
+    description: Starring
+    slug: michael
   - name: Brett Jones
-    description: Starring, Additional camera
+    description: Camera
     slug: brett
