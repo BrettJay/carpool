@@ -3,6 +3,7 @@
   z-index: 10
   overflow: hidden
   text-align: center
+  +fluid-scale(padding-top, $responsive_min, $responsive_max, 60px, $size_scale_4_max)
   &:before
     content: ''
     display: block
@@ -30,27 +31,29 @@
   z-index: 0
   top: 0
   left: 0
+  bottom: 0
+  right: 0
   width: 100%
-  +respond-to(ipad-down)
-    width: 140%
-    left: -20%
+  height: 100%
+  object-fit: cover
 
 .Feature_subtitle
   +fluid-scale(font-size, $responsive_min, $responsive_max, 11px, 13px)
   text-transform: uppercase
   letter-spacing: 0.05em
+  font-weight: 500
 
 .Feature_title
   +fluid-scale(font-size, $responsive_min, $responsive_max, 25px, 48px)
   margin: 0
-  font-weight: 300
+  font-weight: 400
   line-height: 1.25
 
 .Feature_description
   +fluid-scale(font-size, $responsive_min, $responsive_max, 14px, 19px)
   margin: 0 auto
   line-height: 1.67
-  
+
   +respond-to(ipad-up)
     width: 80%
 

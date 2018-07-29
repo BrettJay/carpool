@@ -23,7 +23,7 @@
     = link_to 'All series &rarr;', '/series', class: 'aside_link'
     %h2 Series
   
-  .Row.Row--recent
+  .Row.Row--recent.Row--series
     - recent_series.each do | series |
       .Col.Col--series= partial("partials/series/card", locals: { series: series })
 
