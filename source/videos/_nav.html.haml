@@ -1,6 +1,6 @@
 %ul.FilterNav
   %li.all= link_to 'All', '/videos/'
-  - data.videos.map(&:category).uniq.each do |u|
+  - videos.map { |slug, video | video.category }.uniq.each do |u|
     -if u == "serie"
       %li{class: "#{u}"}= link_to "#{u.humanize}s", "/#{u}s"
     -else

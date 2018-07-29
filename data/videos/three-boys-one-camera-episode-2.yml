@@ -1,0 +1,20 @@
+title: Episode 2
+youtube_id: fwANJXGYvzo
+release_date: 2015-02-10
+category: serie
+runtime: '00:05:15'
+series: three-boys-one-camera
+description: Still reeling from the sudden, absurd events of the previous episode, things will never be the same for David and Brett when they receive a surprise visit from a relative of the recently-deceased Michael.
+credits:
+  - name: Michael Butcher
+    description: Starring, Writing, Additional camera
+    slug: michael
+  - name: David Morgan-Brown
+    description: Starring, Writing
+    slug: david
+  - name: Brett Jones
+    description: Starring, Editing, Additional camera
+    slug: brett
+  - name: Caitlin Clough
+    description: Camera
+    slug: caitlin

@@ -6,20 +6,17 @@ helpers do
   # Helpers are defined in and can be added to `helpers/custom_helpers.rb`.
   # In case you require helpers within `config.rb`, they can be added here.
 
-  def watch_link(video)
-    "/watch/#{video.slug}"
+  def watch_link(slug)
+    "/watch/#{slug}"
   end
   def category_link(video)
-    "/videos/#{video[:category]}s.html"
+    "/videos/#{video[:category]}s"
   end
   def series_link(series)
-    "/series/#{series[:slug]}.html"
-  end
-  def watch_series_link(video)
-    "/series/#{video[:series_slug]}.html"
+    "/series/#{series}"
   end
   def crew_link(crew)
-    "/about/#{crew[:slug]}.html"
+    "/about/#{crew[:slug]}"
   end
 end
 
@@ -53,9 +50,9 @@ activate :ogp do |ogp|
   ogp.base_url = 'http://carpoolcrew.co'
 end
 
-data.videos.each do | video |
-  proxy "/watch/#{video[:slug]}.html", "/watch/template.html", :locals => { :video => video }, :ignore => true
-  proxy "/videos/#{video[:category]}s.html", "/videos/category.html", :locals => { :category => video }, :ignore => true
+data.videos.each do | slug, video |
+  proxy "/watch/#{slug}.html", "/watch/template.html", :locals => { slug: slug, video: video }, :ignore => true
+  proxy "/videos/#{video[:category]}s.html", "/videos/category.html", :locals => { slug: slug, category: video.category }, :ignore => true
 end
 
 data.podcast.each do | episode |
@@ -85,9 +82,6 @@ activate :directory_indexes
 # --------------------------------------------------------------------------------------------------
 # Build configuration
 # --------------------------------------------------------------------------------------------------
-
-# Run build cleaner
-require_relative "./lib/build_cleaner"
 
 configure :build do
   # Exclude any vendor components (bower or custom builds) in the build

@@ -1,0 +1,17 @@
+title: Spiderman 2 Review
+youtube_id: IKUM7t8HZBw
+release_date: 2014-11-27
+category: serie
+runtime: '00:13:40'
+series: boris-and-manuel-reviews
+description: Hello, I am Manuel. Thank you for watching our video, where we take movies and watch them and review them in order to help you decide about what movie is good or not.
+credits:
+  - name: Boris Kozlovsky
+    description: Starring, Writing, Editing
+    slug: boris
+  - name: Manuel Bbvorskitchzsky
+    description: Starring, Writing
+    slug: manuel
+  - name: Brett Jones
+    description: Camera, Editing
+    slug: brett

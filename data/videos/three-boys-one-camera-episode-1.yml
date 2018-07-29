@@ -1,0 +1,20 @@
+title: Episode 1
+youtube_id: RwzwWQ6cdG0
+release_date: 2015-02-03
+category: serie
+runtime: '00:06:16'
+series: three-boys-one-camera
+description: Go behind-the-scenes with Michael, David and Brett to see how the Carpool crew produce their videos and deal with conflict, lest they suffer surprising (and permanent) consequences.
+credits:
+  - name: Michael Butcher
+    description: Starring, Writing
+    slug: michael
+  - name: David Morgan-Brown
+    description: Starring, Writing
+    slug: david
+  - name: Brett Jones
+    description: Starring, Editing
+    slug: brett
+  - name: Caitlin Clough
+    description: Camera
+    slug: caitlin

@@ -1,30 +1,20 @@
-- title: "Horrible Highschool Films"
-  slug: "horrible-highschool-films"
-  description: "Carpool first started off in the year 8 media labs, making their very first short films as school assignments. Here are those films in all their prepubescent glory."
+- title: Horrible Highschool Films
+  slug: horrible-highschool-films
+  description: Carpool first started off in the year 8 media labs, making their very first short films as school assignments. Here are those films in all their prepubescent glory.
   colour: "118, 115, 111"
-  videos: "4"
-- title: "Too Many Uncles"
-  slug: "too-many-uncles"
-  description: "Join David, Michael, and a few too many uncles..."
-  colour: "55, 67, 104"
-  videos: "3"
-- title: "Three Boys, One Camera"
-  slug: "three-boys-one-camera"
-  description: "Go behind the scenes with Michael, David and Brett for a look at how the Carpool Crew write, plan and produce their comedy videos."
+- title: Three Boys, One Camera
+  slug: three-boys-one-camera
+  description: Go behind the scenes with Michael, David and Brett for a look at how the Carpool Crew write, plan and produce their comedy videos.
   colour: "30, 33, 9"
-  videos: "7"
-- title: "Aussie Boys"
-  slug: "aussie-boys"
-  description: "Yo yo yo! It’s ya boize Mike and Davo here to give you the true blue lowdown on how to be a real man’s man, man. Fuckin’ oath."
+- title: Aussie Boys
+  slug: aussie-boys
+  description: Yo yo yo! It’s ya boize Mike and Davo here to give you the true blue lowdown on how to be a real man’s man, man. Fuckin’ oath.
   colour: "89, 18, 151"
-  videos: "3"
-- title: "Boris and Manuel Video CD Watching"
-  slug: "boris-and-manuel-reviews"
-  description: "Join Boris, his good friend Manuel, and a rotating cast of colourful characters as they review some of the most memorable movies and shitty sequels from the mid 2000's that you've forgotten all about."
+- title: Boris and Manuel Video CD Watching
+  slug: boris-and-manuel-reviews
+  description: Join Boris, his good friend Manuel, and a rotating cast of colourful characters as they review some of the most memorable movies and shitty sequels from the mid 2000's that you've forgotten all about.
   colour: "42, 34, 39"
-  videos: "4"
-- title: "Honest Ads"
-  slug: "honest-ads"
-  description: "What if commercials were obligated to accurately reflect reality? Honest Ads explores this alternative reality, with mildly amusing results."
+- title: Honest Ads
+  slug: honest-ads
+  description: What if commercials were obligated to accurately reflect reality? Honest Ads explores this alternative reality, with mildly amusing results.
   colour: "58, 67, 41"
-  videos: "5"
