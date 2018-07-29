@@ -10,16 +10,16 @@ helpers do
     "/watch/#{video.slug}"
   end
   def category_link(video)
-    "/videos/#{video[:category]}s.html"
+    "/videos/#{video[:category]}s"
   end
   def series_link(series)
-    "/series/#{series[:slug]}.html"
+    "/series/#{series[:slug]}"
   end
   def watch_series_link(video)
-    "/series/#{video[:series_slug]}.html"
+    "/series/#{video[:series_slug]}"
   end
   def crew_link(crew)
-    "/about/#{crew[:slug]}.html"
+    "/about/#{crew[:slug]}"
   end
 end
 

@@ -5,7 +5,7 @@
         = video.runtime
     = image_tag("videos/#{video.slug}.jpg")
   -if video.category == "serie"
-    .video-subtitle= link_to video.series, series_link(video)
+    .video-subtitle= link_to video.series, watch_series_link(video)
   -else 
     .video-subtitle= link_to video.category.humanize, category_link(video)
   %h2.title= link_to video.title, watch_link(video)
