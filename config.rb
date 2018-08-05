@@ -50,6 +50,12 @@ activate :ogp do |ogp|
   ogp.base_url = 'http://carpoolcrew.co'
 end
 
+activate :pagination do
+  pageable_set :videos do
+    data.videos.sort_by { |slug, video | video.release_date }.reverse
+  end
+end
+
 data.videos.each do | slug, video |
   proxy "/watch/#{slug}.html", "/watch/template.html", :locals => { slug: slug, video: video }, :ignore => true
   proxy "/videos/#{video[:category]}s.html", "/videos/category.html", :locals => { slug: slug, category: video.category }, :ignore => true

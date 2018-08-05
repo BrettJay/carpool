@@ -16,6 +16,6 @@ gem 'middleman-imageoptim'
 
 gem 'rubocop', require: false
 
-gem 'middleman-deploy'
 gem 'middleman-ogp'
 gem 'middleman-autoprefixer'
+gem 'middleman-pagination'

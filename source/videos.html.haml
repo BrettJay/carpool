@@ -1,6 +1,9 @@
 ---
   title: Videos
   body_classes: dark-header videos_index
+  pagination:
+    for: videos
+    per_page: 12
   meta_description:
   meta_keywords:
 ---
@@ -10,5 +13,17 @@
     %h1.tc Videos
     = partial "videos/nav"
     .Row
-      - videos.each do | slug, video |
-        .Col.Col--video= partial("partials/video/card", locals: { slug: slug, video: video })\
+      - pagination.each do | slug, video |
+        .Col.Col--video= partial("partials/video/card", locals: { slug: slug, video: video })
+
+    %p Page #{pagination.page_num} of #{pagination.total_page_num}
+
+    %p
+      #{link_to "First page", pagination.first_page.url}
+
+      #{link_to "Prev page", pagination.prev_page.url if pagination.prev_page}
+
+      #{link_to "Next page", pagination.next_page.url if pagination.next_page}
+
+      #{link_to "Last page", pagination.first_page.url}
+
