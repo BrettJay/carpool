@@ -56,7 +56,7 @@ data.videos.each do | slug, video |
 end
 
 data.podcast.each do | episode |
-  proxy "/podcast/#{episode.slug}.html", "/podcast/template.html", :locals => { :episode => episode }, :ignore => true
+  proxy "/podcast/episode-#{episode.number}.html", "/podcast/template.html", :locals => { :episode => episode }, :ignore => true
 end
 
 data.series.each do | series |

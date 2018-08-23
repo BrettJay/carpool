@@ -32,11 +32,8 @@
     %h2 From the podcast
 
   .PodcastGroup.cf
-    .PodcastMeta
-      = image_tag 'podcast.jpg', alt: 'Driving Drunk with Carpool'
-    .PodcastList
-      .PodcastItem.PodcastItem--singular.pl3.pr3.pt3.pb3
+    .PodcastItem.PodcastItem--singular
+      %iframe{frameborder: "0", height: "150px", scrolling: "no", seamless: "", src: "https://anchor.fm/carpool/embed/episodes/#{podcast_episode.embed}", width: "100%"}
+      .pl3.pr3.pt3.pb3
         .Podcast_episode Episode #{podcast_episode.number} — #{podcast_episode.date.strftime("%B %d, %Y")}
-        %h2.Podcast_title.pt1.pb1= podcast_episode.title
         %p.Podcast_description.pb2= podcast_episode.description
-        %iframe{frameborder: "0", height: "36px", scrolling: "no", seamless: "", src: "https://simplecast.fm/e/#{podcast_episode.embed}?style=light", width: "100%"}
