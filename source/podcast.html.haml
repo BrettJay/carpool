@@ -15,7 +15,7 @@
         = image_tag 'podcast.jpg', alt: 'Driving Drunk with Carpool'
       .PodcastList
         - data.podcast.each do | episode |
-          = link_to "/podcast/#{episode.slug}/", class: 'pt3 pb3 pl3 pr3 PodcastItem' do
+          = link_to "/podcast/episode-#{episode.number}/", class: 'pt3 pb3 pl3 pr3 PodcastItem' do
             .Podcast_episode Episode #{episode.number} — #{episode.date.strftime("%B %d, %Y")}
             %h2.Podcast_title.pt1.pb1= episode.title
             %p.Podcast_description= episode.description
