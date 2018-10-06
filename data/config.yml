@@ -11,6 +11,25 @@ site:
   active_navigation_item_class: current
   analytics_id: UA-XXXXXXX-XX
 
+podcast_feeds:
+  - name: Apple Podcasts
+    slug: apple
+    url: https://itunes.apple.com/podcast/driving-drunk-with-carpool/id1434971941
+  - name: Google Podcasts
+    slug: google
+    url: https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy81OWIyMjI0L3BvZGNhc3QvcnNz
+  - name: Spotify
+    slug: spotify
+    url: https://open.spotify.com/show/2m29mLOnHjCWdaOrwvVcEr
+  - name: Castbox
+    slug: castbox
+    url: https://castbox.fm/channel/id1436366
+  - name: Overcast
+    slug: overcast
+    url: https://overcast.fm/itunes1434971941/driving-drunk-with-carpool
+  - name: Pocketcasts
+    slug: pocketcasts
+    url: https://pca.st/ha6k
 # Author of CSS & JavaScript
 source:
   author:

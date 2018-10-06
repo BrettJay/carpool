@@ -13,6 +13,10 @@
     .PodcastGroup.cf
       .PodcastMeta
         = image_tag 'podcast.jpg', alt: 'Driving Drunk with Carpool'
+        .pt2.pl3.pr3.pb3
+          %h4 Subscribe
+          - data.config.podcast_feeds.each do | podcast |
+            = link_to podcast.name, podcast.url, class: "PodcastFeed PodcastFeed--#{podcast.slug}"
       .PodcastList
         - data.podcast.each do | episode |
           = link_to "/podcast/episode-#{episode.number}/", class: 'pt3 pb3 pl3 pr3 PodcastItem' do
